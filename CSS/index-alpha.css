@@ -267,8 +267,11 @@ header {
 .apresentation .container  .box >div h2{
   font-size: 2.8rem;
   margin-bottom: 1rem;
-  font-weight: 600;
 } 
+.apresentation .container  .box >div h2 span{
+  font-size: 2.8rem;
+  font-weight: 600;
+}
 
 
 .apresentation .container  .box >div p{
@@ -279,9 +282,23 @@ header {
 
 .apresentation .container  .box >div span{
   color: #ffffff;
-  padding: 0.5rem 1rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  font-size: 1.8rem;
   border-radius: 5px;
-  border:  1px solid #bab2b2;
+  animation: span-colors 1.2s linear infinite;
+}
+
+@keyframes span-colors {
+  0% {
+    color: #9500ff;
+  }
+  50% {
+    color: #000000;
+  }
+  100% {
+    color: #1e00ff;
+  }
 }
 
 .apresentation .container  .box >div ul{
@@ -1188,8 +1205,14 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 2990px;
     padding: 1rem;
+    height: auto;
+  }
+
+  .variations > * { /* Seleciona todos os elementos filhos diretos */
+    max-width: 100%;
+    width: 80%; /* Largura relativa, ajustada à tela */
+    margin-bottom: 2rem; /* Espaçamento entre os elementos */
   }
   .variations .container {
     display: flex;
@@ -1414,8 +1437,13 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 5390px;
     padding: 1rem;
+    height: auto;
+  }
+  .variatives > * { /* Seleciona todos os elementos filhos diretos */
+    max-width: 100%;
+    width: 80%; /* Largura relativa, ajustada à tela */
+    margin-bottom: 2rem; /* Espaçamento entre os elementos */
   }
   .variatives .container {
     display: flex;
@@ -1644,17 +1672,63 @@ header {
   object-position: center;
 }
 
+/*Ajustes nos botão de redirecionamento*/
+
+.apliation .btn {
+  margin-top: 2rem;
+  text-align: center;
+}
+.apliation .btn h2{
+  font-size: 2.4rem;
+  animation: word-colors 1.5s linear infinite;
+  margin-bottom: 2.2rem;
+}
+
+.apliation .btn button{
+  padding: 1rem 3rem;
+  background-image: linear-gradient(#ea5e00, #ff0000);
+  color: #ffffff;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.2s ease;
+}
+
+.apliation .btn button:hover{
+  transform: scale(1.05);
+  background-color: transparent;
+  color: #fefbff;
+  box-shadow: 1px 1px 30px #df3b00, -1px -1px 30px #ff0000;
+}
+
+.apliation .btn button a{
+  color: #ffffff;
+  text-decoration: none;
+}
+
 /*Responsividade*/
 
 @media(max-width: 768px){
   .apliation{
-    height: 1290px;
+    position: absolute;
+    top: 1;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 0;
   }
+
+  .apliation > *{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    gap: 0;
+  }
+
   .apliation .container{
     height: auto;
     padding: 1rem;
