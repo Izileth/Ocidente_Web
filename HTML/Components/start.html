@@ -24,7 +24,6 @@
     <link rel="stylesheet" href="/CSS/Components/Page/Section/featurend-end.css">
     
     <!--Links para os carouseis-->
-    <link rel="stylesheet" href="/JS/Carousel/carousel-fade.js">
     <link rel="stylesheet" href="/CSS/Components/Page/Section/featurend.css">
     <link rel="stylesheet" href="/CSS/Components/Page/Section/brand.css">
     <link rel="stylesheet" href="/CSS/Components/Page/Section/patron.css">
@@ -91,7 +90,7 @@
 
     <section class="section">
         <div  data-aos="zoom-in"  class="beginning">
-            <div data-aos="zoom-in" class="box">
+            <div class="box">
                 <div class="carousel">
                   <div>
                     <div class="navigation-buttons">
@@ -877,25 +876,22 @@
                         <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <di data-aos="fade-up"  v class="box">
+                <div data-aos="fade-up"  v class="box">
                     <form data-aos="zoom-in"  action="#">
-                        <div data-aos="zoom-in" >
-                            <label for="name">Git Hub</label>
-                            <input type="text" id="email" name="name" required>
-                            <a href="#"><i class="fab fa-facebook-square"></i></a>
+                        <div data-aos="zoom-in" class="input-group">
+                            <input type="text" id="nome" placeholder=" " required />
+                            <label for="nome">Full Name</label>
                         </div>
-                        <div data-aos="zoom-in" >
-                            <label for="name">Instagram</label>
-                            <input type="text" id="email" name="name" required>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        <div data-aos="zoom-in" class="input-group">
+                            <input type="email" id="email" placeholder=" " required />
+                            <label for="email">Email</label>
                         </div>
-                        <div data-aos="zoom-in" >
-                            <label for="name">Reddit</label>
-                            <input type="text" id="email" name="name" required>
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <div data-aos="zoom-in" class="input-group">
+                            <input type="tel" id="telefone" placeholder=" " required />
+                            <label for="telefone">Nick Name</label>
                         </div>
                     </form>
-                </di>
+                </div>
                 <div  data-aos="fade-up" class="carousel">
                     <div class="scroll" style="--t:12s">
                         <div>
@@ -944,7 +940,7 @@
     <!--Scripts-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
-    <script src="/JS/Carousel/carousel-lamborguinhi.js"></script>
+    <script src="/JS/Carousel/carousel-fade.js"></script>
     <script src="/JS/navbar.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>  AOS.init(); </script>

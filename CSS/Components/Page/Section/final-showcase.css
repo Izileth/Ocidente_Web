@@ -63,49 +63,93 @@
     border: none;
     transform: scale(1.1);
 }
+.final-showcase .container .box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 .final-showcase .container .box form{
     height: 100px;
-    width: 100%;
-    background-color: transparent;
+    width: 70%;
+    background-color: #080808;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
     flex-wrap: wrap;
 }
-.final-showcase .container .box form >div{
+/* Estilização geral do contêiner */
+.final-showcase .container .box form > div {
     display: flex;
-    background-color: #1a1a1a;
-    width: 40%;
-    flex-direction: row;
+    flex-direction: column;
     gap: 1rem;
+    width:100%;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 0 auto;
     justify-content: center;
     align-items: center;
 }
-.final-showcase .container .box form >div input{
-    width: 75%;
-    padding: 0.4rem;
-    margin-block: 0.5rem;
-    border-radius: 4px;
+
+/* Grupo de inputs */
+.input-group {
+    height: 100px;
+    width: 70%;
+    position: relative;
+    width: 100%;
+}
+
+/* Estilo dos inputs */
+.input-group input {
+    width: 100%;
+    padding: 1rem 0.5rem;
     background-color: #121212;
+    border: 1px solid #555;
     border-radius: 4px;
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
     color: #007cce;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    letter-spacing: 0.2rem;
-    transition: transform 0.2s, color 0.2s ease;
-}
-.final-showcase .container .box form >div input:focus{
-    color: #007cce;
-    text-decoration: none;
-    font-size: normal;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
     letter-spacing: 0.1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-.final-showcase .container .box  form >div input:focus + label{
-    transform: translateX(-25px);
+
+/* Input em foco */
+.input-group input:focus {
+    outline: none;
+    border-color: #007cce;
+    box-shadow: 0 0 8px rgba(0, 124, 206, 0.5);
+}
+
+/* Placeholder invisível */
+.input-group input::placeholder {
+    color: transparent;
+}
+
+/* Estilo do label */
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 0.5rem;
+    transform: translateY(-50%);
+    color: #757575;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+/* Label flutuante */
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+    top: -0.5rem;
+    left: 0.5rem;
+    background-color: #121212;
     color: #007cce;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
+    padding: 0 0.2rem;
+    border-radius: 4px;
 }
+
 .final-showcase .container .box  form >div a{
     width: 5%;
     padding: 0.4rem;
@@ -176,6 +220,7 @@
     }
     .final-showcase .container{
         height: auto;
+        flex-direction: column;
         width: 100%;
         padding: 1rem;
     }
@@ -197,22 +242,29 @@
         width: 100%;
     }
     .final-showcase .container .box{
-        height: 200px;
-        flex-direction: column;
+        height:340px;
+        width: 100%;
     }
     .final-showcase .container .box form{
+        width: 100%;
+        background: #121212;
+        border-radius: 12px;
+        height: max-content;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
     }
     .final-showcase .container .box form >div{
-        width: 50%;
+        margin-block: 1.2rem;
+        height: max-content;
+        width: 100%;
     }
     .final-showcase .container .box form >div input{
-        width: 55%;
+        height: max-content;
+        width: 100%;
     }
     .final-showcase .container .box form >div a{
-        width: 15%;
+        width: 20%;
     }
 }
