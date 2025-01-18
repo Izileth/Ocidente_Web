@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DK Web</title>
-    <!--Links para a Estilização-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!--Links para as Seções-->
     <link rel="stylesheet" href="/CSS/Components/Page/Home/global.css">
     <link rel="stylesheet" href="/CSS/Components/Page/Home/header.css">
     <link rel="stylesheet" href="/CSS/Components/Page/Home/footer.css">
@@ -17,14 +18,22 @@
     <link rel="stylesheet" href="/CSS/Components/Page/Section/closure.css">
     <link rel="stylesheet" href="/CSS/Components/Page/Section/collection-wall.css">
     <link rel="stylesheet" href="/CSS/Components/Page/Section/final-showcase.css">
-
+    <link rel="stylesheet" href="/CSS/Components/Page/Section/showcase-mid.css">
+    <link rel="stylesheet" href="/CSS/Components/Page/Section/collection-wall-mid.css">
+    <link rel="stylesheet" href="/CSS/Components/Page/Section/collections.mid.css">
+    <link rel="stylesheet" href="/CSS/Components/Page/Section/featurend-end.css">
+    
     <!--Links para os carouseis-->
-    <link rel="stylesheet" href="/JS/Carousel/carousel-ferrari.js">
-    <link rel="stylesheet" href="/JS/Carousel/carousel-bugatti.js">
-    <link rel="stylesheet" href="/JS/Carousel/carousel-lamborghini.js">
+    <link rel="stylesheet" href="/JS/Carousel/carousel-fade.js">
     <link rel="stylesheet" href="/CSS/Components/Page/Section/featurend.css">
     <link rel="stylesheet" href="/CSS/Components/Page/Section/brand.css">
     <link rel="stylesheet" href="/CSS/Components/Page/Section/patron.css">
+
+    <!--Links para o Bibliotecas-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!--Links para os favi-icons-->
     <link rel="icon" type="image/png" sizes="16x16"  href="/assets/images/favi-icons/favicons/favicon-16x16.png">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
@@ -33,7 +42,7 @@
 
     <!--Inicio do Header-->
     <header class="header">
-        <nav class="nav">
+        <nav  data-aos="fade-up"class="nav">
             <div class="logo">
                 <div class="creator"><span class="creator-out">Izi</span>Leth<span class="creator-out">net</span></div>
             </div>
@@ -42,7 +51,7 @@
                 <span></span>
                 <span></span>
             </div>
-            <div class="nav-links">
+            <div  data-aos="fade-down" class="nav-links">
                 <ul>
                     <li>
                         <a href="#apresentation">Apresentação</a>
@@ -64,7 +73,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="buttons">
+            <div data-aos="fade-down" class="buttons">
                 <button class="btn-redirect">
                     <span class="fas fa-search"></span>
                     <span class="text">Buscar</span>
@@ -81,8 +90,8 @@
     <!--Início da Primeira seção-->
 
     <section class="section">
-        <div class="beginning">
-            <div class="box">
+        <div  data-aos="zoom-in"  class="beginning">
+            <div data-aos="zoom-in" class="box">
                 <div class="carousel">
                   <div>
                     <div class="navigation-buttons">
@@ -98,7 +107,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="content">
+                <div data-aos="fade-up" class="content">
                     <h5><span>Izi</span>Leth<h5>
                     <h1>Bem Vindo <span> A Extenção</span> Drift King</h1>
                     <h3>Página Web Criada Online</h3>
@@ -116,13 +125,13 @@
     
     <section class="section">
         <div class="patrons">
-            <div class="header">
+            <div data-aos="fade-down" class="header">
                 <i class="fa-solid fa-xmark"></i>
                 <h2>Patrocinadores <i class="fa-solid fa-plus" ></i></h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus, erat vel bibendum laoreet, justo velit convallis velit, sed bibendum dui nunc et velit. Donec vel est a neque gravida posuere vel in neque.</p> <i class="fa-solid fa-xmark"></i>
                 <i class="fa-solid fa-xmark"></i>
             </div>
-            <div class="container">
+            <div data-aos="fade-up" class="container">
                 <div class="scroll" style="--t:12s">
                     <div>
                         <span class="item">Lamborguinhi</span>
@@ -183,15 +192,15 @@
 
     <section class="section">
         <div class="showcase">
-            <div class="header">
+            <div data-aos="fade-down" class="header">
                 <i class="fa-solid fa-plus" ></i>
                 <h2><i class="fa-solid fa-plus" ></i> Modelos</h2>
                 <h3>Decrição dos Principais Modelos</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus, erat vel bibendum laoreet, justo velit convallis velit, sed bibendum dui nunc et velit. Donec vel est a neque gravida posuere vel in neque.</p>
                 <i class="fa-solid fa-plus" ></i>
             </div>
-            <div class="container">
-                <div class="box">
+            <div data-aos="fade-left" class="container">
+                <div data-aos="fade-down"  class="box">
                     <div class="midia">
                         <img src="/assets/images/imagem-carros/Lanborguinhi/Lamborghini-Revuelto.png" alt="Modelo 1">
                     </div>
@@ -201,7 +210,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus, erat vel bibendum laoreet, justo velit convallis velit, sed bibendum dui nunc et velit. Donec vel est a neque gravida posuere vel in neque.</p>
                     </div>
                 </div>
-                <div class="box">
+                <div data-aos="fade-down"  class="box">
                     <div class="midia">
                         <img src="/assets/images/imagem-carros/Lanborguinhi/lamborghini-revuelto-2.png" alt="Modelo 1">
                     </div>
@@ -211,7 +220,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus, erat vel bibendum laoreet, justo velit convallis velit, sed bibendum dui nunc et velit. Donec vel est a neque gravida posuere vel in neque.</p>
                     </div>
                 </div>
-                <div class="box">
+                <div data-aos="fade-down" class="box">
                     <div class="midia">
                         <img src="/assets/images/imagem-carros/Lanborguinhi/lamborghini-revuelto-3.png" alt="Modelo 1">
                     </div>
@@ -221,7 +230,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus, erat vel bibendum laoreet, justo velit convallis velit, sed bibendum dui nunc et velit. Donec vel est a neque gravida posuere vel in neque.</p>
                     </div>
                 </div>
-                <div class="box">
+                <div data-aos="fade-down"  class="box">
                     <div class="midia">
                         <img src="/assets/images/imagem-carros/Lanborguinhi/Lamborgnhi-revuelto-4.png.jpg" alt="Modelo 1">
                     </div>
@@ -234,14 +243,126 @@
             </div>
         </div>
     </section>
+    
+    <!--Inicio da Seção Bonus-->
+    <section class="section">
+        <div  data-aos="fade-down" class="showcase-mid">
+            <div data-aos="fade-up"  class="container">
+                <div data-aos="fade-up"  class="header">
+                    <div>
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <h2>Motores <i class="fa-solid fa-arrow-up"></i></h2>
+                        <h3>Melhores Motores do Mercado</h3>
+                        <i class="fa-solid fa-xmark"></i>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus, erat vel bibendum laoreet, justo velit convallis velit, sed bibendum dui nunc et velit. Donec vel est a neque gravida posuere vel in neque.</p>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+                <div data-aos="zoom-in"  class="box">
+                    <div style="--t:54s">
+                        <div class="midia">
+                            <img src="/assets//images/imagem-carros/Buggati/Bugatti Bolide.png" alt="Banner">
+                        </div>
+                        <div class="midia">
+                            <img src="/assets//images/imagem-carros/Ferrari/Ferrari 12 colindri-1.png" alt="Banner">
+                        </div>
+                        <div class="midia">
+                            <img src="/assets/images/imagem-carros/Lanborguinhi/Lamborghini-Revuelto.png" alt="Banner">
+                        </div>
+                        <div class="midia">
+                            <img src="/assets//images/imagem-carros/Buggati/Bugatti Bolide-2.png" alt="Banner">
+                        </div>
+                        <div class="midia">
+                            <img src="/assets//images/imagem-carros/Ferrari/Ferrari 12 clindri-4.png" alt="Banner">
+                        </div>
+                        <div class="midia">
+                            <img src="/assets/images/imagem-carros/Lanborguinhi/Lamborgnhi-revuelto-4.png.jpg" alt="Banner">
+                        </div>
+                    </div>
+                    <div data-aos="zoom-in"  style="--t:54s">
+                        <div class="midia">
+                            <img src="/assets//images/imagem-carros/Buggati/Bugatti Bolide.png" alt="Banner">
+                        </div>
+                        <div class="midia">
+                            <img src="/assets//images/imagem-carros/Ferrari/Ferrari 12 colindri-1.png" alt="Banner">
+                        </div>
+                        <div class="midia">
+                            <img src="/assets/images/imagem-carros/Lanborguinhi/Lamborghini-Revuelto.png" alt="Banner">
+                        </div>
+                        <div class="midia">
+                            <img src="/assets//images/imagem-carros/Buggati/Bugatti Bolide-2.png" alt="Banner">
+                        </div>
+                        <div class="midia">
+                            <img src="/assets//images/imagem-carros/Ferrari/Ferrari 12 clindri-4.png" alt="Banner">
+                        </div>
+                        <div class="midia">
+                            <img src="/assets/images/imagem-carros/Lanborguinhi/Lamborgnhi-revuelto-4.png.jpg" alt="Banner">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--Fim da Seção Bonus-->
+
+    <!--Carousel Final-->
+    <section class="section">
+        <div data-aos="fade-up"  class="featurend-end">
+           <div  data-aos="fade-down" class="container">
+                <div class="scroll" style="--t:32s">
+                    <div>
+                        <span>Drift <p>King</p></span>
+                    </div>
+                    <div>
+                        <span>Drift <p>King</p></span>
+                    </div>
+                    <div>
+                        <span>Drift <p>King</p></span>
+                    </div>
+                    <div>
+                        <span>Drift <p>King</p></span>
+                    </div>
+                    <div>
+                        <span>Drift <p>King</p></span>
+                    </div>
+                    <div>
+                        <span>Drift <p>King</p></span>
+                    </div>
+                </div>
+                <div class="scroll" style="--t:22s">
+                    <div>
+                        <span>Izi <p>Leth</p></span>
+                    </div>
+                    <div>
+                        <span>Izi <p>Leth</p></span>
+                    </div>
+                    <div>
+                        <span>Izi <p>Leth</p></span>
+                    </div>
+                    <div>
+                        <span>Izi <p>Leth</p></span>
+                    </div>
+                    <div>
+                        <span>Izi <p>Leth</p></span>
+                    </div>
+                    <div>
+                        <span>Izi <p>Leth</p></span>
+                    </div>
+                </div>
+           </div>
+        </div>
+    </section>
+    
+    <!--Fim do Carousel Final-->
         
     <!--Início da Teceira seção-->
 
     <section class="section">
         <div class="highlights">
-            <div class="container">
-                <div class="box">
-                    <div class="content">
+            <div data-aos="fade-left" class="container">
+                <div data-aos="fade-up" class="box">
+                    <div data-aos="fade-dow" class="content">
                         <h5><span>Izi</span>Leth</h5>
                         <h2>Principais Destaques</h2>
                         <h3>As Máquinas Mais Potentes Do Planeta</h3>
@@ -274,7 +395,7 @@
     <!--Inico do Carousel de Marcas-->
     <section class="section">
         <div class="brand">
-            <div class="header">
+            <divd ata-aos="fade-up" class="header">
                 <div>
                     <i class="fa-solid fa-arrow-right"></i>
                     <h2>Marcas        <i class="fa-solid fa-arrow-right"></i></h2>
@@ -282,8 +403,8 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus, erat vel bibendum laoreet, justo velit convallis velit, sed bibendum dui nunc et velit. Donec vel est a neque gravida posuere vel in neque.</p>  
                     <i class="fa-solid fa-xmark"></i>
                 </div>
-            </div>
-            <div class="carousel">
+            </divd>
+            <div data-aos="fade-dow" class="carousel">
                 <div class="scroll" style="--t:15s">
                     <div>
                         <span class="item">LBK Perfomace</span>
@@ -335,15 +456,15 @@
     <section class="section">
         <div class="collections">
             <div class="container">
-                <div class="header">
+                <div data-aos="fade-down" class="header">
                     <i class="fa-solid fa-arrow-right"></i>
                     <h2>Coleções        <i class="fa-solid fa-arrow-right"></i></h2>
                     <h3>As Melhores Marcas do Planeta <i class="fa-solid fa-arrow-up"></i></h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus, erat vel bibendum laoreet, justo velit convallis velit, sed bibendum dui nunc et velit. Donec vel est a neque gravida posuere vel in neque.</p>  
                     <i class="fa-solid fa-xmark"></i>  
                 </div>
-                <div class="box">
-                    <div class="item">
+                <div data-aos="fade-up" class="box">
+                    <div data-aos="fade-down" class="item">
                         <div class="midia">
                             <img src="/assets/images/imagem-carros/Ferrari/Ferrari 12 colindri.png" alt="Coleção 1">
                         </div>
@@ -353,7 +474,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus, erat vel bibendum laoreet, justo velit convallis velit, sed bibendum dui nunc et velit. Donec vel est a neque gravida posuere vel in neque.</p>
                         </div>
                     </div>
-                    <div class="item">
+                    <div data-aos="fade-down"  class="item">
                         <div class="midia">
                             <img src="/assets/images/imagem-carros/Ferrari/Ferrari 12 clindri-4.png" alt="Coleção 1">
                         </div>
@@ -363,7 +484,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus, erat vel bibendum laoreet, justo velit convallis velit, sed bibendum dui nunc et velit. Donec vel est a neque gravida posuere vel in neque.</p>
                         </div>
                     </div>
-                    <div class="item">
+                    <div data-aos="fade-down"  class="item">
                         <div class="midia">
                             <img src="/assets/images/imagem-carros/Ferrari/Ferrari 12 clindri-3.png" alt="Coleção 1">
                         </div>
@@ -373,7 +494,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus, erat vel bibendum laoreet, justo velit convallis velit, sed bibendum dui nunc et velit. Donec vel est a neque gravida posuere vel in neque.</p>
                         </div>
                     </div>
-                    <div class="item">
+                    <div data-aos="fade-down"  class="item">
                         <div class="midia">
                             <img src="/assets/images/imagem-carros/Ferrari/Ferrari 12 clindri-3.png" alt="Coleção 1">
                         </div>
@@ -387,14 +508,124 @@
             </div>
         </div>
     </section>
+        
+    <!--Inicio da Seção Bonus-->
+    <section class="section">
+        <div data-aos="fade-down" class="collections-mid">
+            <div data-aos="fade-up"  class="container">
+                <div data-aos="fade-right"  class="header">
+                    <div>
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <h2>Motores <i class="fa-solid fa-arrow-up"></i></h2>
+                        <h3>Melhores Motores do Mercado</h3>
+                        <i class="fa-solid fa-xmark"></i>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus, erat vel bibendum laoreet, justo velit convallis velit, sed bibendum dui nunc et velit. Donec vel est a neque gravida posuere vel in neque.</p>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+                <div data-aos="zoom-in"  class="box">
+                    <div style="--t:54s">
+                        <div class="midia">
+                            <img src="/assets//images/imagem-carros/Buggati/Bugatti Bolide.png" alt="Banner">
+                        </div>
+                        <div class="midia">
+                            <img src="/assets//images/imagem-carros/Ferrari/Ferrari 12 colindri-1.png" alt="Banner">
+                        </div>
+                        <div class="midia">
+                            <img src="/assets/images/imagem-carros/Lanborguinhi/Lamborghini-Revuelto.png" alt="Banner">
+                        </div>
+                        <div class="midia">
+                            <img src="/assets//images/imagem-carros/Buggati/Bugatti Bolide-2.png" alt="Banner">
+                        </div>
+                        <div class="midia">
+                            <img src="/assets//images/imagem-carros/Ferrari/Ferrari 12 clindri-4.png" alt="Banner">
+                        </div>
+                        <div class="midia">
+                            <img src="/assets/images/imagem-carros/Lanborguinhi/Lamborgnhi-revuelto-4.png.jpg" alt="Banner">
+                        </div>
+                    </div>
+                    <div data-aos="zoom-in"  style="--t:54s">
+                        <div class="midia">
+                            <img src="/assets//images/imagem-carros/Buggati/Bugatti Bolide.png" alt="Banner">
+                        </div>
+                        <div class="midia">
+                            <img src="/assets//images/imagem-carros/Ferrari/Ferrari 12 colindri-1.png" alt="Banner">
+                        </div>
+                        <div class="midia">
+                            <img src="/assets/images/imagem-carros/Lanborguinhi/Lamborghini-Revuelto.png" alt="Banner">
+                        </div>
+                        <div class="midia">
+                            <img src="/assets//images/imagem-carros/Buggati/Bugatti Bolide-2.png" alt="Banner">
+                        </div>
+                        <div class="midia">
+                            <img src="/assets//images/imagem-carros/Ferrari/Ferrari 12 clindri-4.png" alt="Banner">
+                        </div>
+                        <div class="midia">
+                            <img src="/assets/images/imagem-carros/Lanborguinhi/Lamborgnhi-revuelto-4.png.jpg" alt="Banner">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--Fim da Seção Bonus-->
        
+    <!--Carousel Final-->
+    <section class="section">
+        <div  data-aos="fade-up" class="featurend-end">
+           <div  data-aos="fade-down" class="container">
+                <div class="scroll" style="--t:32s">
+                    <div>
+                        <span>Drift <p>King</p></span>
+                    </div>
+                    <div>
+                        <span>Drift <p>King</p></span>
+                    </div>
+                    <div>
+                        <span>Drift <p>King</p></span>
+                    </div>
+                    <div>
+                        <span>Drift <p>King</p></span>
+                    </div>
+                    <div>
+                        <span>Drift <p>King</p></span>
+                    </div>
+                    <div>
+                        <span>Drift <p>King</p></span>
+                    </div>
+                </div>
+                <div class="scroll" style="--t:22s">
+                    <div>
+                        <span>Izi <p>Leth</p></span>
+                    </div>
+                    <div>
+                        <span>Izi <p>Leth</p></span>
+                    </div>
+                    <div>
+                        <span>Izi <p>Leth</p></span>
+                    </div>
+                    <div>
+                        <span>Izi <p>Leth</p></span>
+                    </div>
+                    <div>
+                        <span>Izi <p>Leth</p></span>
+                    </div>
+                    <div>
+                        <span>Izi <p>Leth</p></span>
+                    </div>
+                </div>
+           </div>
+        </div>
+    </section>
+
     <!--Início da Quinta Quinta-->
 
     <section class="section">
         <div class="closure">
             <div class="container">
-                <div class="box">
-                    <div class="content">
+                <div data-aos="fade-up" class="box">
+                    <div data-aos="fade-down"  class="content">
                         <h5><span>Izi</span>Leth</h5>
                         <h2>Detaques Recentes</h2>
                         <h3>As Principais Referencias Desse Mundo</h3>
@@ -404,7 +635,7 @@
                             <a href="#" class="button">Avançar</a>
                         </div>
                     </div>
-                    <div class="carousel">
+                    <div data-aos="fade-right"  class="carousel">
                         <div>
                             <div class="arrows">
                                 <span class="prev">
@@ -430,14 +661,14 @@
     <section class="section">
         <div class="featured">
             <div class="container">
-                <div class="header">
+                <div data-aos="fade-down"  class="header">
                     <i class="fa-solid fa-arrow-right"></i>
                     <h2>Destaques        <i class="fa-solid fa-arrow-up"></i></h2>
                     <h3>Veja os Melhores Carros do Mercado <i class="fa-solid fa-angle-right"></i></h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus, erat vel bibendum laoreet, justo velit convallis velit, sed bibendum dui nunc et velit. Donec vel est a neque gravida posuere vel in neque.</p>  
                     <i class="fa-solid fa-arrow-right"></i>
                 </div>    
-                <div class="carousel">
+                <div data-aos="fade-up"  class="carousel">
                     <div class="scroll" style="--t:12s">
                         <div>
                             <span>Aventador</span>
@@ -463,7 +694,7 @@
     <section class="section">
         <div class="collection-wall">
             <div class="container">
-                <div class="header">
+                <div data-aos="fade-up"  class="header">
                     <div>
                         <i class="fa-solid fa-arrow-up"></i>
                         <h2>Novas Coleções <i class="fa-plus"></i></h2>
@@ -471,8 +702,8 @@
                         <i class="fa-solid fa-xmark"></i>
                     </div>
                 </div>
-                <div class="box">
-                    <div class="item">
+                <div  data-aos="fade-down" class="box">
+                    <div data-aos="fade-left"  class="item">
                         <div class="midia">
                             <img src="/assets/images/imagem-carros/Buggati/Bugatti Bolide.png">
                         </div>
@@ -482,7 +713,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus, erat vel bibendum laoreet, justo velit convallis velit, sed bibendum dui nunc et velit. Donec vel est a neque gravida posuere vel in neque.</p>
                         </div>
                     </div>
-                    <div class="item">
+                    <div data-aos="fade-left"   class="item">
                         <div class="midia">
                             <img src="/assets/images/imagem-carros/Buggati/Bugatti Bolide.png">
                         </div>
@@ -492,7 +723,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus, erat vel bibendum laoreet, justo velit convallis velit, sed bibendum dui nunc et velit. Donec vel est a neque gravida posuere vel in neque.</p>
                         </div>
                     </div>
-                    <div class="item">
+                    <div data-aos="fade-left"   class="item">
                         <div class="midia">
                             <img src="/assets/images/imagem-carros/Buggati/Bugatti Bolide.png">
                         </div>
@@ -502,7 +733,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus, erat vel bibendum laoreet, justo velit convallis velit, sed bibendum dui nunc et velit. Donec vel est a neque gravida posuere vel in neque.</p>
                         </div>
                     </div>
-                    <div class="item">
+                    <div data-aos="fade-left"   class="item">
                         <div class="midia">
                             <img src="/assets/images/imagem-carros/Buggati/Bugatti Bolide.png">
                         </div>
@@ -516,12 +747,125 @@
             </div>
         </div>
     </section>
+        
+    <!--Inicio da Seção Bonus-->
+    <section class="section">
+        <div data-aos="fade-up"  class="collection-wall-mid">
+            <div data-aos="fade-down"  class="container">
+                <div data-aos="fade-left"  class="header">
+                    <div>
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <h2>Motores <i class="fa-solid fa-arrow-up"></i></h2>
+                        <h3>Melhores Motores do Mercado</h3>
+                        <i class="fa-solid fa-xmark"></i>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus, erat vel bibendum laoreet, justo velit convallis velit, sed bibendum dui nunc et velit. Donec vel est a neque gravida posuere vel in neque.</p>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+                <div data-aos="zoom-in"  class="box">
+                    <div style="--t:54s">
+                        <div class="midia">
+                            <img src="/assets//images/imagem-carros/Buggati/Bugatti Bolide.png" alt="Banner">
+                        </div>
+                        <div class="midia">
+                            <img src="/assets//images/imagem-carros/Ferrari/Ferrari 12 colindri-1.png" alt="Banner">
+                        </div>
+                        <div class="midia">
+                            <img src="/assets/images/imagem-carros/Lanborguinhi/Lamborghini-Revuelto.png" alt="Banner">
+                        </div>
+                        <div class="midia">
+                            <img src="/assets//images/imagem-carros/Buggati/Bugatti Bolide-2.png" alt="Banner">
+                        </div>
+                        <div class="midia">
+                            <img src="/assets//images/imagem-carros/Ferrari/Ferrari 12 clindri-4.png" alt="Banner">
+                        </div>
+                        <div class="midia">
+                            <img src="/assets/images/imagem-carros/Lanborguinhi/Lamborgnhi-revuelto-4.png.jpg" alt="Banner">
+                        </div>
+                    </div>
+                    <div data-aos="zoom-in"  style="--t:54s">
+                        <div class="midia">
+                            <img src="/assets//images/imagem-carros/Buggati/Bugatti Bolide.png" alt="Banner">
+                        </div>
+                        <div class="midia">
+                            <img src="/assets//images/imagem-carros/Ferrari/Ferrari 12 colindri-1.png" alt="Banner">
+                        </div>
+                        <div class="midia">
+                            <img src="/assets/images/imagem-carros/Lanborguinhi/Lamborghini-Revuelto.png" alt="Banner">
+                        </div>
+                        <div class="midia">
+                            <img src="/assets//images/imagem-carros/Buggati/Bugatti Bolide-2.png" alt="Banner">
+                        </div>
+                        <div class="midia">
+                            <img src="/assets//images/imagem-carros/Ferrari/Ferrari 12 clindri-4.png" alt="Banner">
+                        </div>
+                        <div class="midia">
+                            <img src="/assets/images/imagem-carros/Lanborguinhi/Lamborgnhi-revuelto-4.png.jpg" alt="Banner">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!--Carousel Final-->
+    <section  class="section">
+        <div data-aos="fade-up"  class="featurend-end">
+           <div data-aos="fade-down"  class="container">
+                <div class="scroll" style="--t:32s">
+                    <div>
+                        <span>Drift <p>King</p></span>
+                    </div>
+                    <div>
+                        <span>Drift <p>King</p></span>
+                    </div>
+                    <div>
+                        <span>Drift <p>King</p></span>
+                    </div>
+                    <div>
+                        <span>Drift <p>King</p></span>
+                    </div>
+                    <div>
+                        <span>Drift <p>King</p></span>
+                    </div>
+                    <div>
+                        <span>Drift <p>King</p></span>
+                    </div>
+                </div>
+                <div class="scroll" style="--t:22s">
+                    <div>
+                        <span>Izi <p>Leth</p></span>
+                    </div>
+                    <div>
+                        <span>Izi <p>Leth</p></span>
+                    </div>
+                    <div>
+                        <span>Izi <p>Leth</p></span>
+                    </div>
+                    <div>
+                        <span>Izi <p>Leth</p></span>
+                    </div>
+                    <div>
+                        <span>Izi <p>Leth</p></span>
+                    </div>
+                    <div>
+                        <span>Izi <p>Leth</p></span>
+                    </div>
+                </div>
+           </div>
+        </div>
+    </section>
+    
+    <!--Fim da Seção Bonus-->
+
     <!--Fim da sétima seção-->
+
     <!--Início do contato-->
     <section class="section">
         <div class="final-showcase">
             <div class="container">
-                <div class="header">
+                <div data-aos="fade-down"   class="header">
                     <div>
                         <i class="fa-solid fa-arrow-up"></i>
                         <h2><i class="fa-plus"></i>Entre em Contato Com o Desenvovedor</h2>
@@ -533,26 +877,26 @@
                         <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="box">
-                    <form action="#">
-                        <div>
+                <di data-aos="fade-up"  v class="box">
+                    <form data-aos="zoom-in"  action="#">
+                        <div data-aos="zoom-in" >
                             <label for="name">Git Hub</label>
                             <input type="text" id="email" name="name" required>
                             <a href="#"><i class="fab fa-facebook-square"></i></a>
                         </div>
-                        <div>
+                        <div data-aos="zoom-in" >
                             <label for="name">Instagram</label>
                             <input type="text" id="email" name="name" required>
                             <a href="#"><i class="fab fa-instagram"></i></a>
                         </div>
-                        <div>
+                        <div data-aos="zoom-in" >
                             <label for="name">Reddit</label>
                             <input type="text" id="email" name="name" required>
                             <a href="#"><i class="fab fa-linkedin"></i></a>
                         </div>
                     </form>
-                </div>
-                <div class="carousel">
+                </di>
+                <div  data-aos="fade-up" class="carousel">
                     <div class="scroll" style="--t:12s">
                         <div>
                             <span>IziLeth</span>
@@ -580,7 +924,7 @@
 
 
     <!--Início do rodapé-->
-    <footer >
+    <footer data-aos="zoom-in"  >
         <div >
             <h2>Automobilismo Online</h2>
             <p>Todos os direitos reservados | Copyrithing 2025</p>
@@ -602,6 +946,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
     <script src="/JS/Carousel/carousel-lamborguinhi.js"></script>
     <script src="/JS/navbar.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>  AOS.init(); </script>
     <!--Fim dos Scripts-->
 
     <!--Google Analytics-->
