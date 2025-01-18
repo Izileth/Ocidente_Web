@@ -1,0 +1,43 @@
+/*Estilização das seções da Página*/
+
+.section {
+    background-color: #000000;
+    max-width: 100vw;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 4rem;
+    margin: 0;
+}
+
+/*Responsividade*/
+
+/*Mobile*/
+@media only screen and (min-width: 768px){
+    .section{
+        flex-direction: column;
+    }
+
+}
+
+/*Tablet*/
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    .section{
+        flex-direction: row;
+    }
+
+}
+
+/*Desktop*/
+
+@media only screen and (min-width: 1440px){
+    .section{
+        flex-direction: row;
+    }
+
+}
+

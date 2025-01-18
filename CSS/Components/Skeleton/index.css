@@ -1,0 +1,365 @@
+/*Ajustes na priemira seção da Plataforma*/
+
+/*Ajustes no carrousel*/
+
+.carousel {
+  height: 860px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.carousel .box .item{
+  position:absolute;
+  margin-top: 100px;
+  inset: 0 0 0 0;
+}
+.carousel .box .item:nth-child(1){
+  z-index: 1;
+}
+
+.carousel .box .item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel .box .item .content >div{
+  margin-inline: 1rem;
+}
+.carousel .box .item .content .creator-out{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-weight: 250;
+  font-style: italic;
+}
+.carousel .box .item .content {
+  position: absolute;
+  top: 20%;
+  width:80%;
+  max-width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-right: 30%;
+  box-sizing: border-box;
+  color: #fff;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.carousel .box .item .content .creator{
+  font-size: 2rem;
+  letter-spacing: 0.6rem;
+}
+.carousel .box .item .content .title{
+  font-weight: bold;
+  font-size:4.2rem;
+}
+.carousel .box .item .content .subtitle{
+  font-weight: 100;
+  font-size: 2.2rem;
+}
+.carousel .box .item .content .description{
+  width: 50%;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+.carousel .box .item .content .btns{
+  display: grid;
+  grid-template-columns: repeat(2, 130px);
+  grid-template-rows:40px;
+  gap: 2.4rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.carousel .box .item .content .btns button{
+  border: none;
+  background-color: #fff;
+  text-align: center;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  height: 44px;
+  width: 144px;
+  padding: 0.8rem;
+  justify-content: center;
+  letter-spacing: 0.6rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 500;
+}
+.carousel .box .item .content .btns button:nth-child(2) a{
+  text-decoration: none;
+  padding: 0.8rem;
+  color: #fff;
+  border: 1px solid #fff,
+}
+.carousel .box .item .content .btns button:nth-child(2){
+  background-color: transparent;
+  color: #ddd,
+  border 1px solid #ddd,
+}
+
+/*Estiliação da aba sliders em baixo da seção*/
+ 
+.thumbnail{
+  position: absolute;
+  bottom: 50px;
+  left: 45%;
+  width: max-content;
+  z-index: 100;
+  display: flex;
+  gap: 2rem;
+}
+.thumbnail .item{
+  width: 250px;
+  height: 380px;
+  flex-shrink: 0;
+  position: relative;
+  transition: width 0.5s ease;
+}
+.thumbnail .item img{
+  border-radius: 32px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.thumbnail .item .content {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
+.thumbnail .item .content .title{
+  font-weight: bold;
+}
+
+/*Ajustes nos botões de seta*/
+
+.arrows {
+  position: absolute;
+  top: 80%;
+  right: 65%;
+  width: 300px;
+  max-width: 30%;
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.arrows button {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #717171c1;
+  border: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #ddd;
+  font-weight: bold;
+  font-size: large;
+  transition: .5s;
+  z-index: 100;
+}
+
+.arrows button:hover {
+  background-color: #ddd;
+  color: #1a1a1a;
+}
+
+/*Animação de revelação de palavras*/
+
+
+.carousel .box .item:nth-child(1) .creator, .title, .subtitle, .description, .btns, .des, .btn{
+  transform: translateY(50px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: BlurOut 0.5s 1s linear 1 forwards ;
+}
+
+@keyframes BlurOut {
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transform: translateY(0);
+  }
+}
+.carousel .box .item:nth-child(1) .title{
+  animation-delay: 1.2s;
+}
+.carousel .box .item:nth-child(1) .subtitle{
+  animation-delay: 1.4s;
+}
+.carousel .box .item:nth-child(1) .description{
+  animation-delay: 1.6s;
+}
+.carousel .box .item:nth-child(1) .creator{
+  animation-delay: 1.4s;
+}
+.carousel .box .item:nth-child(1) .btns{
+  animation-delay: 1.8s;
+}
+
+/*Efeito de  mundança de imgem do carrousel*/
+
+.carousel.next .box .item:nth-child(1) img{
+  width: 150px;
+  height: 220px;
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  border-radius: 20px;
+  animation: MoveOut 0.5s linear 1 forwards;
+}
+
+@keyframes MoveOut {
+  to{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    border-radius: 0;
+  }
+}
+
+/*Efeito do carrousel*/
+
+.carousel.prev .box .item:nth-child(2) {
+  z-index: 2;
+}
+.carousel.prev .box .item:nth-child(2) img{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: MoveAll 0.5s linear 1 forwards;
+}
+
+@keyframes MoveAll{
+  to{
+    width: 150px;
+    height: 220px;
+    border-radius: 20px;
+    left: 50%;
+    bottom: 50px;
+  }
+}
+
+.carousel.next .thumbnail .item:nth-last-child(1) {
+  width: 0;
+  overflow: hidden;
+  animation: MoveThumbnail 0.5s linear forwards;
+}
+
+@keyframes MoveThumbnail {
+  from {
+      width: 0;
+  }
+  to {
+      width: 250px;
+  }
+}
+
+/* Animação do container do thumbnail */
+.carousel.next .thumbnail {
+  transform: translateX(250px); /* Ajustado para corresponder ao tamanho final */
+  animation: TransformThumbnail 0.5s linear 1 forwards;
+}
+
+@keyframes TransformThumbnail {
+  0% {
+    transform: translateX(250px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.carousel.prev .thumbnail .item:nth-last-child(1){
+  width: 0;
+  overflow: hidden;
+  animation: MoveThumbnail linear 1 forwards;
+}
+.carousel.prev .thumbnail .item:nth-last-child(2) .creator,
+.carousel.prev .thumbnail .item:nth-last-child(2) .title,
+.carousel.prev .thumbnail .item:nth-last-child(2) .subtitle,
+.carousel.prev .thumbnail .item:nth-last-child(2) .description,
+.carousel.prev .thumbnail .item:nth-last-child(2) .btns{
+  animation: ContentOut 1.5s linear 1 forwards;
+}
+@keyframes ContentOut {
+  to{
+    transform: translateY(-150px);
+    filter: blur(20px);
+    opacity: 0;
+  }
+}
+
+/*Ajuses nos botões*/
+
+.carousel.next .arrows button, .carousel.prev .arrows button{
+   pointer-events: none;
+}
+
+/*Ajustes no conometro de mudança*/
+.time{
+  width: 100%;
+  height: 5px;
+  background-color: #e20000;
+  position: absolute;
+  z-index: 100;
+  top:0;
+  left: 0;
+}
+.carousel.next .time, .carousel.prev .time{
+  width: 100%;
+  animation: TimeOut 2s linear 1 forwards;
+}
+
+@keyframes TimeOut {
+  to{
+    width: 0;
+  }
+}
+/*Responsividade*/
+
+@media (max-width: 678px) {
+  .container{
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    gap: 0;
+    overflow: hidden;
+    margin-inline: 1.1rem;
+  }
+  
+  .carousel{
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0;
+    overflow-x: hidden;
+  }
+  .carousel .box .item .content {
+    margin-top: -120px;
+    width: 290px;
+    width: 100%;
+  }
+  .carousel .box .item .content .title{
+    font-size: 3.2rem;
+    line-height: 1.5;
+    width: 320px;
+    color: #ddd;
+    margin-bottom: 0.5rem;
+  }
+  .carousel .box .item .content .description{
+    font-size: 1.6rem;
+    line-height: 1.2;
+    width: 320px;
+    color: #ddd;
+    margin-bottom: 1rem;
+  }
+  .carousel .thumbnail{
+    width: 30px;
+    height: 30px;
+    flex-direction: row;
+    overflow-x: hidden;
+  }
+}

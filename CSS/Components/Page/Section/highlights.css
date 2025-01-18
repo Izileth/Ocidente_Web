@@ -1,0 +1,241 @@
+/* Seção de Destaques */
+.highlights {
+    height: 810px;
+    width: 100%;
+    background-color: #e00000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    border-radius: 12px;
+    gap: 2rem;
+}
+
+.highlights .container {
+    background-color: #e00000;
+    height: 690px;
+    max-width: 100%;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative; /* Necessário para posicionar elementos como setas e barra */
+}
+
+
+.highlights .container .box {
+    background-image: url('/assets/images/imagem-carros/Ferrari/Ferrari\ 12\ colindri-1.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background-image 0.5s ease;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.highlights .container .box .content {
+    background: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1.8rem;
+}
+
+.highlights .container .box .content h5 {
+    font-size: 1.6rem;
+    letter-spacing: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.highlights .container .box .content h2 {
+    color: #fff;
+    font-size: 3.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.highlights .container .box .content h3 {
+    font-size: 2.1rem;
+    margin-bottom: 0.8rem;
+}
+
+.highlights .container .box .content p {
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.highlights .container .box .content span {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
+
+/* Ajustes no carrossel de slides */
+.highlights .container .box .carousel {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-size: cover;
+    position: relative;
+}
+
+.highlights .container .box .carousel > div {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    border-radius: 12px;
+    margin: 10px;
+}
+
+.highlights .container .box .carousel .arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+.highlights .container .box .carousel div .arrows span {
+    background: rgba(0, 0, 0, 0.5);
+    color: #e00000;
+    border: none;
+    font-size:1.6rem;
+    padding: 15px;
+    width: 60px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.highlights .container .box .carousel div .arrows span:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.4rem;
+    padding: 10px;
+}
+.buttons .btn-hight{
+    background-color: #020202;
+    padding: 0.8rem;
+    border-radius: 6px;
+    text-align: center;
+    width: 160px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 0.2rem;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.buttons .btn-hight:hover{
+    background-color: #fff;
+    color: #000;
+
+}
+.buttons .btn-hight:nth-child(2){
+    background-color: #e00000;
+    color: #020202;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 0.2rem;
+    text-decoration: none;
+    box-shadow: 2px 2px #e00000, -2px -2px #e00000;
+    border: none;
+}
+.buttons .btn-hight:nth-child(2):hover{
+    background-color: #fff;
+    color: #e00000;
+    box-shadow: 2px 2px #fff, -2px -2px #fff;
+    text-decoration: underline;
+}
+
+
+/* Barra de carregamento */
+.highlights .container .box .carousel .bar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    right: 0;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.highlights .container .box .carousel .bar .bar-load {
+    display: block;
+    height: 100%;
+    width: 0;
+    background: #ff0000;
+    animation: load 5s linear infinite;
+}
+
+@keyframes load {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .highlights .container {
+        background-image: url('/assets/images/imagem-carros/Ferrari/Ferrari\ 12\ colindri-1.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .highlights .container .box {
+        background: transparent;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .highlights .container .box .content {
+        background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+        width: 100%;
+        height: auto;
+    }
+
+    .highlights .container .box .carousel {
+        width: 100%;
+        height: 400px;
+    }
+
+    .highlights .container .box .carousel .bar {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .highlights .container .box .carousel .bar .bar-load {
+        padding-inline: 80px;
+    }
+}

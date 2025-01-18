@@ -1,0 +1,83 @@
+
+/*AJustes no rodapé*/
+
+footer{
+  background-color: #000000;
+  color: #ffffff;
+  padding: 2rem;
+  text-align: center;
+}
+
+footer >div{
+  margin-bottom: 2rem;
+}
+footer >div h2{
+  font-size: 2.4rem;
+  margin-block: 1.5rem;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: word-colors 1.5s linear infinite;
+}
+footer >div p {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+footer >div a{
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer >div a:hover{
+  color: #000000;
+  text-decoration: underline;
+}
+footer >div ul{
+  color: #fefbff;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  margin-block: 1.4rem;
+  padding-inline: 0;
+}
+footer >div ul li{
+  color: #fefbff;
+  margin-right: 1rem;
+  padding: 0.8rem 0.8rem;
+  font-size: 1.1rem;
+  margin-inline: 1.4rem;
+  border-bottom: 1px solid #fefbff;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+footer >div ul li:hover{
+  color: #000000;
+  background-color:#fefbff;
+  box-shadow: 2px 2px  20px #fefbff, -2px -2px 20px #fefbff;
+}
+
+/*Responsividade*/
+
+@media (max-width: 768px){
+
+  footer{
+    position: absolute;
+    top: 1;
+  }
+  footer >div h2{
+    font-size: 2rem;
+    margin-block: 1.2rem;
+  }
+  footer >div p {
+    font-size: 1rem;
+    margin-block: 0.5rem;
+  }
+  footer >div ul li{
+    font-size: 1rem;
+    margin-inline: 1rem;
+    padding: 0.6rem 0.6rem;
+  }
+}

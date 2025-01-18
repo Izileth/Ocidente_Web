@@ -1,0 +1,86 @@
+.brand{
+    height: 500px;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.brand .header{
+    height: 250px;
+    width: 100%;
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1rem;
+}
+.brand .header h2{
+    font-size: 3.8rem;
+    text-align: right;
+    margin-inline-end: 1.8rem;
+    color: #e70000;
+}
+.brand .header h3{
+    font-size: 1.6rem;
+    margin-block: 0.8rem;
+    text-align: right;
+    margin-inline-end: 1.8rem;
+}
+.brand .header p{
+    font-size: 1.4rem;
+    margin-block: 0.8rem;
+    text-align: right;
+    margin-inline-end: 1.8rem;
+}
+
+.brand .carousel {
+    height: 200px;
+    max-width: 100vw;
+    width: 100%;
+    background-color: transparent;
+    padding: 2rem;
+}
+
+.brand .carousel .scroll{
+    background-color: transparent;
+    width: 100%;
+    height: 100px;
+    max-width: 100vw;
+    gap: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #121212 30%, #111111 70%, transparent);
+    padding: 0;
+}
+.brand .carousel .scroll >div{
+    background-color: #000;
+    width: 250px;
+    height: 90px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #e70000;
+    text-align: center;
+    font-size: 1.1rem;
+    letter-spacing: 0.8rem;
+    cursor: pointer;
+    animation: animate var(--t) linear infinite;
+}
+
+@keyframes animate {
+
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}

@@ -1,0 +1,226 @@
+/*Ajustes no Header*/
+
+header {
+  background-color: transparent;
+  color: #fff;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-decoration: none;
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+nav{
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.444);
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem;
+  z-index: 2;
+}
+
+nav ul{
+  display: flex;
+  gap: 1.4rem;
+  list-style: none;
+  z-index: 2;
+}
+
+
+nav ul li{
+  display: flex;
+  align-items: center;
+  padding: 0.2rem;
+  gap: 1rem;
+  transition: transform 0.25s ease;
+  z-index: 2;
+}
+nav ul li a{
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #fff;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+nav ul li a:hover{
+  color: #ddd;
+  font-style: normal;
+  text-shadow: #f2f2f2;
+  font-style: normal;
+  text-decoration: none;
+  transform: scale(1.05);
+}
+
+
+.logo{
+  color:  #f2f2f2;
+  font-weight: 100;
+  border-radius: 12px;
+  font-size: 1.3rem;
+  padding: 0.5rem 1rem;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.logo .creator{
+  letter-spacing: 0.4rem;
+  font-size: 1.6rem;
+}
+.logo .creator-out{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: 1.6rem;
+}
+
+.logo:hover{
+  transform: scale(1.05);
+}
+
+/*Versão Mobile*/
+
+.nav-bar{
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.nav-bar span {
+  display: block;
+  width: 25px;
+  height: 0.10rem;
+  margin-block: 0.05rem;
+  background-color: #f2f2f2;
+  transition: 0.3s;
+}
+
+/*Ajustes nos botões*/
+
+.buttons{
+  width: auto;
+  height: auto;
+  color: #fff;
+}
+.buttons .btn-redirect{
+  width: 120px;
+  height: 40px;
+  border-radius: 6px;
+  border: none;
+  background-color: #ff5100;
+  margin-inline: 0.6rem;
+  color: #fff;
+}
+.buttons .btn-redirect:nth-child(1){
+  color: #fff;
+  border: none;
+  transition: all 1s, background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.buttons .btn-redirect:nth-child(1):hover{
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #ddd;
+}
+.buttons .btn-redirect:nth-child(2){
+  background-color: #000;
+  color: #fff;
+  border: none;
+  transition: all 1s, background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.buttons .btn-redirect:nth-child(2):hover{
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ddd;
+}
+
+/* Media Query para Mobile */
+
+@media screen and (max-width: 768px) {
+
+  .nav-bar{
+      display: flex;
+      z-index: 1000;
+      position: relative;
+      z-index: 1001;
+  }
+
+  .nav-links {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      height: 100vh;
+      background-color: #000000;
+      padding-top: 80px;
+      transition: 0.5s ease;
+  }
+
+  .nav-links.active {
+      right: 0;
+  }
+
+  nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-inline: 1.8rem;
+      z-index: 1;
+  }
+
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  nav ul li {
+      width: 100%;
+      background-color: #030303;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 6px 0;
+  }
+
+  nav ul li a {
+      padding: 15px 30px;
+      display: block;
+      margin: 0;
+      transition: transform 0.25s ease, box-sizing 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  nav ul li a:hover {
+      transform: translateY(1.025);
+      box-shadow: 2px 2px 20px #ddd, -2px -2px 20px #fff;
+      box-sizing: border-box;
+  }
+  nav .buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: 1.4rem;
+    padding: 10px;
+  }
+  nav .buttons .btn-redirect{
+    border-radius: 0;
+    height: 32px;
+  }
+
+  /* Animação do botão hamburguer */
+
+  .nav-bar.active span:nth-child(1) {
+      transform: rotate(45deg) translate(2.5px, 2.5px);
+  }
+
+  .nav-bar.active span:nth-child(2) {
+      opacity: 0;
+  }
+
+  .nav-bar.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px);
+  }
+} 

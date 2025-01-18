@@ -1,0 +1,49 @@
+/*Importação das Fontes */
+/*Playwrite Australia SA*/
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Oswald:wght@200..700&family=Playwrite+AU+SA:wght@100..400&display=swap');
+
+/*Rubik*/
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Oswald:wght@200..700&family=Playwrite+AU+SA:wght@100..400&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/*Quirksand*/
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Oswald:wght@200..700&family=Playwrite+AU+SA:wght@100..400&family=Quicksand:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/*Whereas recognition of the inherent dignity*/
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Major+Mono+Display&family=Oswald:wght@200..700&family=Playwrite+AU+SA:wght@100..400&family=Quicksand:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/*Bootstrap*/
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+
+
+/*Estilos da página*/
+*{
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  box-sizing: border-box; /* Inclui margens e bordas no tamanho do elemento */
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+
+body {
+  background-color: #000;
+  color: #ddd;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*Responsividade do documento*/
+
+@media screen and (max-width: 768px) {
+  html{
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 484px) {
+  html{
+    font-size: 0.6rem;
+  }
+}
