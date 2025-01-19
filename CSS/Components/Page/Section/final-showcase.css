@@ -247,8 +247,8 @@
     }
     .final-showcase .container .box form{
         width: 100%;
-        background: #121212;
         border-radius: 12px;
+        background: transparent;
         height: max-content;
         display: flex;
         justify-content: center;

@@ -201,7 +201,7 @@
 
 @media screen and (max-width: 768px){
     .closure .container{
-        background-image: url('/assets/images/imagem-carros/Buggati/Bugatti\ Bolide-2.png');
+        background-image: url('/assets/images/image-mobile/bugatti/Bugatti\ Bolide\ 3.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -216,7 +216,8 @@
     }
     .closure .container .box .content{
         background: linear-gradient(to top,transparent, rgba(0,0,0,0.8), rgba(0,0,0,0.8));
-        width: 100%;
+        height: max-content;
+        width: 110%;
     }
     .closure .container .box .carousel{
         width: 100%;

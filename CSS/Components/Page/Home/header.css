@@ -201,6 +201,7 @@ nav ul li a:hover{
   nav .buttons{
     width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     gap: 1.4rem;
     padding: 10px;
@@ -209,6 +210,7 @@ nav ul li a:hover{
     border-radius: 0;
     height: 32px;
   }
+  
 
   /* Animação do botão hamburguer */
 
@@ -224,3 +226,4 @@ nav ul li a:hover{
       transform: rotate(-45deg) translate(7px, -6px);
   }
 } 
+

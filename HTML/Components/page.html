@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/CSS/Components/Page/Home/global.css">
     <link rel="stylesheet" href="/CSS/Components/Page/Home/header.css">
     <link rel="stylesheet" href="/CSS/Components/Page/Home/footer.css">
+    <link rel="stylesheet" href="/CSS/Components/Page/Home/modal.css">
     <link rel="stylesheet" href="/CSS/Components/Page/Section/section.css">
     <link rel="stylesheet" href="/CSS/Components/Page/Section/beginning.css">
     <link rel="stylesheet" href="/CSS/Components/Page/Section/showcase.css">
@@ -43,7 +44,7 @@
     <header class="header">
         <nav  data-aos="fade-up"class="nav">
             <div class="logo">
-                <div class="creator"><span class="creator-out">Izi</span>Leth<span class="creator-out">net</span></div>
+                <div class="creator"><span class="creator-out">Drift</span>King<span class="creator-out">Web</span></div>
             </div>
             <div class="nav-bar">
                 <span></span>
@@ -53,32 +54,32 @@
             <div  data-aos="fade-down" class="nav-links">
                 <ul>
                     <li>
-                        <a href="#apresentation">Apresentação</a>
+                        <a href="#lamborguinhi">Lamborguinhi</a>
                     </li>
                     <li>
-                        <a href="#models">Modelos</a>
+                        <a href="#ferrari">Ferrari</a>
                     </li>
                     <li>
-                        <a href="#narative">Narrativas</a>
+                        <a href="#bugatti">Buggati</a>
                     </li>
                     <li>
-                        <a href="#variantion">Variações</a>
+                        <a href="#creator">Criador</a>
                     </li>
                     <li>
-                        <a href="#ampliation">Ampliação</a>
+                        <a href="#contact">Contato</a>
                     </li>
                     <li>
-                        <a id="btn-explore" href="/HTML/index-beta.html">Explorar</a>
+                        <a id="btn-explore" href="/HTML/index-beta.html">Dúvidas</a>
                     </li>
                 </ul>
             </div>
             <div data-aos="fade-down" class="buttons">
-                <button class="btn-redirect">
+                <button id="searchBtn" class="btn-redirect">
                     <span class="fas fa-search"></span>
-                    <span class="text">Buscar</span>
+                    <span  class="text">Buscar</span>
                 </button>
-                <button class="btn-redirect">
-                    <span class="fas fa-search"></span>
+                <button id="redirectBtn" class="btn-redirect">
+                    <span class="fas fa-arrow-up"></span>
                     <span class="text">Explorar</span>
                 </button>
             </div>
@@ -91,6 +92,37 @@
     <section class="section">
         <div  data-aos="zoom-in"  class="beginning">
             <div class="box">
+                <div id="searchModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Faça a Sua Busca</h2>
+                        <h3>Insira Palavras Chave</h3>
+                        <form class="search-form">
+                            <div class="input-search">
+                                <input type="text" class="search-input" placeholder="Digite sua busca...">
+                                <label for="nome">Insira Palavras Chave</label>
+                            </div>
+                            <button type="submit" class="search-button">Buscar</button>
+                        </form>
+                    </div>
+                </div>
+                <div id="redirectModal" class="modal-mid">
+                    <div class="modal-content-mid">
+                        <span class="close-mid">&times;</span>
+                        <h2>Explore Esse Vasto Mundo</h2>
+                        <h3>Selecione As Opções Abaixo</h3>
+                        <div class="box-mid">
+                            <div class="midia-mid">
+                                <img src="/assets/images/imagem-carros/Lanborguinhi/Lamborghini-Revuelto.png" alt="Image">
+                            </div>
+                            <div class="tags-mid">
+                                <span><a href="#"></a><i class=" fa-solid fa-arrow-left"></i> Inicio</span>
+                                <span><a href="#"></a><i class=" fa-solid fa-arrow-up"></i> Meio</span>
+                                <span><a href="#"></a><i class=" fa-solid fa-arrow-down"></i> Fim</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="carousel">
                   <div>
                     <div class="navigation-buttons">
@@ -189,7 +221,7 @@
         
     <!--Início da Segunda seção-->
 
-    <section class="section">
+    <section id="lamborguinhi" class="section">
         <div class="showcase">
             <div data-aos="fade-down" class="header">
                 <i class="fa-solid fa-plus" ></i>
@@ -392,7 +424,7 @@
     </section>
 
     <!--Inico do Carousel de Marcas-->
-    <section class="section">
+    <section  class="section">
         <div class="brand">
             <divd ata-aos="fade-up" class="header">
                 <div>
@@ -452,7 +484,7 @@
     
     <!--Início da Quarta seção-->
 
-    <section class="section">
+    <section id="ferrari" class="section">
         <div class="collections">
             <div class="container">
                 <div data-aos="fade-down" class="header">
@@ -571,7 +603,7 @@
     <!--Fim da Seção Bonus-->
        
     <!--Carousel Final-->
-    <section class="section">
+    <section  class="section">
         <div  data-aos="fade-up" class="featurend-end">
            <div  data-aos="fade-down" class="container">
                 <div class="scroll" style="--t:32s">
@@ -690,7 +722,7 @@
 
     <!--Inicio da sétima seção-->
 
-    <section class="section">
+    <section id="bugatti" class="section">
         <div class="collection-wall">
             <div class="container">
                 <div data-aos="fade-up"  class="header">
@@ -861,7 +893,7 @@
     <!--Fim da sétima seção-->
 
     <!--Início do contato-->
-    <section class="section">
+    <section id="contact"  class="section">
         <div class="final-showcase">
             <div class="container">
                 <div data-aos="fade-down"   class="header">
@@ -920,7 +952,7 @@
 
 
     <!--Início do rodapé-->
-    <footer data-aos="zoom-in"  >
+    <footer id="creator" data-aos="zoom-in"  >
         <div >
             <h2>Automobilismo Online</h2>
             <p>Todos os direitos reservados | Copyrithing 2025</p>
@@ -940,8 +972,11 @@
     <!--Scripts-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
-    <script src="/JS/Carousel/carousel-fade.js"></script>
+    <script src="/JS/Carousel/carouselFade.js"></script>
     <script src="/JS/navbar.js"></script>
+    <script src="/JS/Modal/redirectModal.js"></script>
+    <script src="/JS/Modal/searchModal.js"></script>
+    <script type="module" src="/JS/Search/searchKeywords.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>  AOS.init(); </script>
     <!--Fim dos Scripts-->

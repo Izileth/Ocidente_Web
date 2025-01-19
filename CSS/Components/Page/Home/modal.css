@@ -1,0 +1,367 @@
+
+/*Modal de Busca*/
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+  
+/* Modal Content */
+  
+/* Modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 2;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #101010;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #000;
+    width: 80%;
+    height: max-content;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(108, 89, 89, 0.2);
+    animation: animatetop 0.4s;
+    z-index: 2;
+}
+.modal-content h2{
+  color: #ff5100;
+  font-weight: 700;
+  font-size: 3.2rem;
+  letter-spacing: 0.1rem;
+  font-family:Arial, Helvetica, sans-serif;
+  margin-block: 0.4rem;
+}
+.modal-content h3{
+  color:#fff;
+  font-size: 1.6rem;
+  font-weight: 100;
+  font-family:Arial, Helvetica, sans-serif;
+  letter-spacing: 0.1rem;
+  margin-block-end: 0.2rem;
+}
+
+.modal-content form{
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  flex-direction: column;
+}
+
+
+/* Estilo dos inputs */
+
+/* Grupo de inputs */
+.input-search {
+  height: 100px;
+  width: 70%;
+  margin-block: 0.5rem;
+  position: relative;
+  width: 100%;
+}
+.input-search input {
+  height: 50px;
+  width: 100%;
+  padding: 1rem 0.5rem;
+  background-color: #080808;
+  border: 1px solid #555;
+  border-radius: 4px;
+  font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+  color: #ff5000;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Input em foco */
+.input-search input:focus {
+  outline: none;
+  border-color: #ff5100;
+  box-shadow: 0 0 8px rgba(255, 136, 0, 0.5);
+}
+
+/* Placeholder invisível */
+.input-search  input::placeholder {
+  color: transparent;
+}
+
+/* Estilo do label */
+.input-search label {
+  position: absolute;
+  top: 25%;
+  left: 0.5rem;
+  transform: translateY(-50%);
+  color: #757575;
+  font-size: 1.2rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Label flutuante */
+.input-search  input:focus + label,
+.input-search  input:not(:placeholder-shown) + label {
+  top: -0.5rem;
+  left: 0.5rem;
+  background-color: #121212;
+  color: #ff5100;
+  font-size: 0.9rem;
+  padding: 0 0.2rem;
+  border-radius: 4px;
+}
+
+/*Animação do Label Flutuante*/
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+/*Fechamento do Modal*/
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+    z-index: 2;
+}
+
+.close:hover {
+    color: #000;
+}
+
+/* Estilo para o formulário de busca dentro do modal */
+.search-form {
+    margin-top: 20px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #ff5100;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #ff5000;
+}
+
+/*Ajustes no Segundo Modal*/
+
+/*Modal de Busca*/
+/* The Modal (background) */
+.modal-mid {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+  
+/* Modal Content */
+  
+/* Modal */
+
+.modal-mid {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 2;
+}
+
+.modal-content-mid {
+    position: relative;
+    background-color: #101010;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #000;
+    width: 80%;
+    height: max-content;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(108, 89, 89, 0.2);
+    animation: animatetop 0.4s;
+    z-index: 2;
+}
+.modal-content-mid h2{
+  color: #ff5100;
+  font-weight: 700;
+  font-size: 3.2rem;
+  letter-spacing: 0.1rem;
+  font-family:Arial, Helvetica, sans-serif;
+  margin-block: 0.4rem;
+}
+.modal-content-mid h3{
+  color:#fff;
+  font-size: 1.6rem;
+  font-weight: 100;
+  font-family:Arial, Helvetica, sans-serif;
+  letter-spacing: 0.1rem;
+  margin-block-end: 0.2rem;
+}
+
+/*Fechamento do Modal*/
+
+.close-mid {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+    z-index: 2;
+}
+
+.close-mid:hover {
+    color: #000;
+}
+
+/*Ajustes no Conteúdo*/
+
+.box-mid{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+}
+.box-mid .midia-mid{
+    width: 100%;
+    padding: 10px;
+    background-color: #1a1a1a;
+    border: 1px solid #131313;
+    border-radius: 4px;
+    margin-block:2rem;
+}
+.box-mid .midia-mid img{
+    width: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 4px;
+    height: auto;
+}
+.box-mid .tags-mid{
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    width: max-content;
+    gap: 0.6rem;
+}
+.box-mid .tags-mid span{
+    background-color: #1a1a1a;
+    font-size: 1.1rem;
+    color: #ff5000;
+    padding: 0.6rem 3.2rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box-mid .tags-mid span:hover{
+    background-color: #ff5000;
+    box-shadow: 0 0 18px rgb(255, 89, 0);
+    color: #fff;
+}
+.box-mid .tags-mid span a{
+    color: #ff5100;
+    text-decoration: none;
+}
+
+/*Responsividade*/
+
+@media screen and (max-width: 600px) {
+    .input-search label {
+        font-size: 1.4rem;
+    }
+    .input-search input {
+        font-size: 1.4rem;
+    }
+    .search-form {
+        margin-top: 10px;
+    }
+    .search-input {
+        width: 90%;
+    }
+    .modal-content-mid {
+        width: 90%;
+        margin: 10% auto;
+    }
+    .box-mid .midia-mid {
+        width: 100%;
+        padding: 5px;
+    }
+    .box-mid .tags-mid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));
+        grid-gap: 5px;
+        margin-top: 5px;
+        gap: 0.5rem;
+    }
+}
+
+/*Sistema de Busca*/
+
+.suggestions-container {
+    margin-top: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.suggestion-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0;
+}
+
+.search-input {
+    margin-bottom: 0 !important;
+}

@@ -275,8 +275,15 @@
 }
 
 @media (max-width: 768px) {
+    .beginning{
+        background-color: #ff5100;
+        border-radius: 12px;
+    }
     .beginning .box {
         background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.3));
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
         flex-direction: column-reverse;
         border-radius: 12px;
     }
@@ -287,13 +294,19 @@
         border-radius: 12px;
     }
     .beginning .box .content h1 {
+        margin-inline-start: 1.2rem;
         font-size: 3.2rem;
     }
     .beginning .box .content p {
+        margin-inline-start: 1.2rem;
         font-size: 1.2rem;
     }
     .beginning .box .content h3 {
+        margin-inline-start: 1.2rem;
         font-size: 2.2rem;
+    }
+    .beginning .box .content h5 {
+        margin-inline-start: 1.2rem;
     }
     .beginning .box .carousel {
         height: 500px;
