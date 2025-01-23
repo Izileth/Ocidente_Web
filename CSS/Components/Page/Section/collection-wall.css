@@ -143,18 +143,21 @@
         width: 100%;
     }
     .collection-wall .container .box{
+        background-color: #000;
         height: auto;
         width: 100%;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(1, 1fr);
-        grid-gap: 1rem;
+        grid-gap: 2.8rem;
+        margin-block: 2.4rem;
     }
     .collection-wall .container .box .midia img{
         width: 100%;
         height: auto;
     }
     .collection-wall .container .item{
+        background-color: #003ef9;
         height: auto;
         width: 100%;
     }
