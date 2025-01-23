@@ -1,241 +1,219 @@
-.closure{
+/* Seção de Destaques */
+.closure {
     height: 810px;
     width: 100%;
+    background-color: rgb(40, 0, 221);
     display: flex;
-    background-color: rgb(45, 45, 183);
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    color: #fff;
     border-radius: 12px;
-}
-
-.closure .container{
-    background-image: url('/assets/images/imagem-carros/Buggati/Bugatti\ Bolide-2.png');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: background-image 0.5s ease;
-    width: 95%;
-    height: 720px;
-    max-width: 100vw;
-    display: flex;
     gap: 2rem;
 }
 
-.closure .container .box{
-    height: max-content;
-    width: 100%;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-}
+/*Ajutes no Carrousel*/
 
-.closure .container .box .content{
-    background: linear-gradient(to left, rgba(0,0,0,0.6),rgba(0,0,0,0.6));
+
+.closure .container {
     height: 690px;
-    width: 70%;
-    text-align: right;
+    max-width: 100%;
+    width: 95%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: end;
-    color: #fff;
-    font-size:1.1rem;
-    padding: 1rem;
-    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative; /* Necessário para posicionar elementos como setas e barra */
 }
 
-.closure .container .box .content h5{
+
+/*Ajutes no Carrousel*/
+
+ 
+
+.closure  .container .closure-carousel {
+    height: 690px;
+    position: relative;
+    width: 100%;
+    max-width: 1600px;
+    margin: auto;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.closure  .container  .closure-carousel .closure-carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+ 
+.closure  .container .closure-carousel .closure-carousel-item {
+    max-width: 100vw;
+    min-width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.closure  .container .closure-carousel  .closure-carousel-item img {
+    max-width: 100vw;
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+}
+
+.closure  .container .closure-carousel .closure-carousel-item  .closure-carousel-content {
+    background: linear-gradient(to right, #000,transparent);
+    position: absolute;
+    bottom: 0.6rem;
+    height: 690px;
+    max-width: 100vw;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.closure-carousel-content h5 {
     font-size: 1.6rem;
     letter-spacing: 0.8rem;
-    margin-block: 0.8rem;
-    margin-inline-start: 1.8rem;
+    margin-bottom: 0.8rem;
+    text-align: left;
+    width: 100%;
+    margin-block-start: 2.4rem;
+    margin-inline: 1.4rem;
 }
-.closure .container .box .content h2{
+
+.closure-carousel-content h2 {
+    text-align: left;
     color: #fff;
     font-size: 3.4rem;
-    margin-inline-start: 1.8rem;
+    margin-bottom: 0.8rem;
+    margin-inline: 1.4rem;
 }
-.closure .container .box .content h3{
-    font-size: 2.1rem;
-    margin-block: 0.8rem;
-    margin-inline-start: 1.8rem;
 
+.closure-carousel-content h3 {
+    text-align: left;
+    font-size: 2.1rem;
+    margin-bottom: 0.8rem;
+    margin-inline: 1.4rem;
 }
-.closure .container .box .content p{
+
+.closure-carousel-content p {
+    text-align: left;
     color: #fff;
     font-size: 1.1rem;
-    margin-inline-start: 1.8rem;
+    width: 60%;
+    margin-inline: 1.4rem;
 }
-.closure .container .box .content span{
+
+.closure-carousel-content span {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: italic;
 }
-
-/*Ajustes no carrousel de Slides*/
-
-
-/*Ajustes na caixa de Slides*/
-
-.closure .container .box .carousel{
-    width: 70%;
-    height: 600px;
+.closure-carousel-content .btns{
     display: flex;
-    justify-content: center;
-    align-items: end;
-    background-size: cover;
-}
-.closure .container .box .carousel >div{
+    max-width: 100vw;
     width: 100%;
-    height: 120px;
-    display: flex;
-    align-items:center;
-    justify-content: space-around;
-    flex-direction: row-reverse;
-    border-radius: 12px;
-    margin: 10px;
-}
-/*Ajustes nos Botões*/
-
-.closure .container .box .carousel .arrows{
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-.closure .container .box .carousel .arrows span{
-    background: rgba(0, 0, 0, 0.5);
-    color: royalblue;
-    border: none;
-    padding: 25px;
-    width: 70px;
-    cursor: pointer;
-    border-radius: 50%;
-    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content:start;
     align-items: center;
-    justify-content: center;
+    margin-inline-start: 1.4rem;
+    margin-bottom: 1.5rem;
+    margin-block: 1.8rem;
+}
+ 
+.closure-carousel-content .closure-btn {
+    padding: 10px 30px;
+    border: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #5836ff;
+    color: #ffffff;
+    letter-spacing: 0.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.closure-carousel-content .closure-btn:hover {
+    background: #ffffff;
+    color: #000;;
+    box-shadow: 0 0 10px 2px #ffffff;
+}
+.closure-carousel-content .btns a{
+    text-decoration: none;
+}
+
+.closure-carousel .closure-carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.closure-carousel .closure-carousel-indicators div {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
     transition: background 0.3s;
 }
 
-.arrows span:hover {
-    background: rgba(0, 0, 0, 0.8);
-}
-.buttons{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1.4rem;
-    padding: 10px;
-}
-.buttons a{
-    background-color: #020202;
-    padding: 0.8rem;
-    border-radius: 6px;
-    text-align: center;
-    width: 160px;
-    border: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    letter-spacing: 0.2rem;
-    text-decoration: none;
-    transition: background-color 0.2s , box-shadow 0.2s ease;
+.closure-carousel  .closure-carousel-indicators div.active {
+    background: #5836ff;
+    box-shadow: 0 0 10px 2px #5836ff;
 }
 
-.buttons a:hover{
-    background-color: #fff;
-    box-shadow: 1px 1px #fff, -1px 1px #fff;
-    color: #000;
-
-}
-.buttons a:nth-child(2){
-    background-color: royalblue;
-    color: #020202;
-    border: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    letter-spacing: 0.2rem;
-    text-decoration: underline;
-}
-.buttons a:nth-child(2):hover{
-    background-color: #fff;
-    color: royalblue;
-    box-shadow: 1px 1px rgb(45, 45, 183), -1px 1px rgb(45, 45, 183);
-    text-decoration: underline;
+@keyframes fade-in2 {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-/*Ajustes na barra de carregamento*/
-
-.closure .container .box .carousel .bar{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 4px;
-    right: 0;
-    background: rgba(255, 255, 255, 0.3);
+.fade-in2 {
+    animation: fade-in2 0.8s ease-in-out;
 }
 
-.closure .container .box .carousel .bar .bar-load{
-    display: block;
-    height: 100%;
-    width: 0;
-    background: royalblue;    
-    animation: load 5s linear infinite;
-}
-
-@keyframes load {
-    0% {
-        width: 0;
+@media (max-width: 768px) {
+    .closure-carousel{
+        border-radius: 12px;
     }
-    100% {
+    .closure-carousel-track{
+        height: auto;
+        border-radius: 12px;
+    }
+    .closure-carousel-item{
+        background: linear-gradient(to bottom, #000, transparent);
+        height: auto;
         width: 100%;
-    }
-}
-
-
-/*Ajutes na responsividade*/
-
-@media screen and (max-width: 768px){
-    .closure .container{
-        background-image: url('/assets/images/image-mobile/bugatti/Bugatti\ Bolide\ 3.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        flex-direction: column;
-        align-items: center;
-    }
-    .closure .container .box{
-        background: transparent;
-        flex-direction: column;
-        width: 100%;
-        height: 500px;
-    }
-    .closure .container .box .content{
-        background: linear-gradient(to top,transparent, rgba(0,0,0,0.8), rgba(0,0,0,0.8));
-        height: max-content;
-        width: 110%;
-    }
-    .closure .container .box .carousel{
-        width: 100%;
-        height: 400px;
-    }
-    .closure .container .box .carousel .bar{
         display: flex;
         flex-direction: column;
     }
-    .closure .container .box .carousel .bar .bar-load{
-        padding-inline: 80px;
+    
+    .closure-carousel-content  {
+        background: linear-gradient(to bottom, #000, transparent);
+        width: 100%;
+        font-size: 14px;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .closure-carousel-content h2 {
+        font-size: 18px;
     }
 
-    .buttons{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 0.8rem;
+    .closure-carousel-content .btns {
+        padding: 8px 15px;
+        flex-direction: row;
+        width: 100%;
+        align-items: start;
+        justify-content: start;
+        font-size: 14px;
+    }
+    .closure-carousel-content .btns .closure-btn{
+        font-size: 0.8rem;
+        border-radius: 2px;
+        padding: 0.6rem 2.6rem;
     }
 }

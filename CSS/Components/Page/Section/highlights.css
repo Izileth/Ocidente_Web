@@ -2,7 +2,7 @@
 .highlights {
     height: 810px;
     width: 100%;
-    background-color: #e00000;
+    background-color: #eb0000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,8 +12,10 @@
     gap: 2rem;
 }
 
+/*Ajutes no Carrousel*/
+
+
 .highlights .container {
-    background-color: #e00000;
     height: 690px;
     max-width: 100%;
     width: 95%;
@@ -24,219 +26,185 @@
     position: relative; /* Necessário para posicionar elementos como setas e barra */
 }
 
-
-.highlights .container .box {
-    background-image: url('/assets/images/imagem-carros/Ferrari/Ferrari\ 12\ colindri-1.png');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: background-image 0.5s ease;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
+ 
+.container .carousel-section {
+    height: 690px;
     position: relative;
+    width: 100%;
+    max-width: 1600px;
+    margin: auto;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-.highlights .container .box .content {
-    background: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
-    height: 100%;
-    width: 50%;
+.carousel-section  .highlights-carousel-track {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 1.8rem;
+    transition: transform 0.5s ease-in-out;
+}
+ 
+.highlights-carousel-item {
+    max-width: 100vw;
+    min-width: 100%;
+    position: relative;
+    text-align: center;
 }
 
-.highlights .container .box .content h5 {
+.highlights-carousel-item img {
+    max-width: 100vw;
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+}
+
+.highlights-carousel-content {
+    background: linear-gradient(to right, #000,transparent);
+    position: absolute;
+    bottom: 0.6rem;
+    height: 690px;
+    max-width: 100vw;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+
+.highlights-carousel-content h5 {
     font-size: 1.6rem;
     letter-spacing: 0.8rem;
     margin-bottom: 0.8rem;
+    text-align: left;
+    width: 100%;
+    margin-block-start: 2.4rem;
+    margin-inline: 1.4rem;
 }
 
-.highlights .container .box .content h2 {
+.highlights-carousel-content h2 {
+    text-align: left;
     color: #fff;
     font-size: 3.4rem;
     margin-bottom: 0.8rem;
+    margin-inline: 1.4rem;
 }
 
-.highlights .container .box .content h3 {
+.highlights-carousel-content h3 {
+    text-align: left;
     font-size: 2.1rem;
     margin-bottom: 0.8rem;
+    margin-inline: 1.4rem;
 }
 
-.highlights .container .box .content p {
+.highlights-carousel-content p {
+    text-align: left;
     color: #fff;
     font-size: 1.1rem;
+    width: 60%;
+    margin-inline: 1.4rem;
 }
 
-.highlights .container .box .content span {
+.highlights-carousel-content span {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: italic;
 }
-
-/* Ajustes no carrossel de slides */
-.highlights .container .box .carousel {
-    width: 70%;
-    height: 100%;
+.highlights-carousel-content .btns{
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    background-size: cover;
-    position: relative;
-}
-
-.highlights .container .box .carousel > div {
+    max-width: 100vw;
     width: 100%;
-    height: 120px;
-    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content:start;
     align-items: center;
-    justify-content: space-around;
-    flex-direction: row-reverse;
-    border-radius: 12px;
-    margin: 10px;
+    margin-inline-start: 1.4rem;
+    margin-bottom: 1.5rem;
+    margin-block: 1.8rem;
 }
-
-.highlights .container .box .carousel .arrows {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
-    box-sizing: border-box;
-    z-index: 10;
-}
-
-.highlights .container .box .carousel div .arrows span {
-    background: rgba(0, 0, 0, 0.5);
-    color: #e00000;
+ 
+.highlights-carousel-content .highlights-btn {
+    padding: 10px 30px;
     border: none;
-    font-size:1.6rem;
-    padding: 15px;
-    width: 60px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background:#eb0000;
+    color: #ffffff;
+    letter-spacing: 0.2rem;
+    border-radius: 5px;
     cursor: pointer;
-    border-radius: 50%;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlights-carousel-content .highlights-btn:hover {
+    background: #ffffff;
+    color: #000;;
+    box-shadow: 0 0 10px 2px #ffffff;
+}
+.highlights-carousel-content .btns a{
+    text-decoration: none;
+}
+
+.carousel-section .highlights-carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    gap: 10px;
+}
+
+.carousel-section .highlights-carousel-indicators div {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
     transition: background 0.3s;
 }
 
-.highlights .container .box .carousel div .arrows span:hover {
-    background: rgba(0, 0, 0, 0.8);
+.carousel-section  .highlights-carousel-indicators div.active {
+    background: #ff3636;
+    box-shadow: 0 0 10px 2px #eb0000;
 }
 
-
-.buttons{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1.4rem;
-    padding: 10px;
-}
-.buttons .btn-hight{
-    background-color: #020202;
-    padding: 0.8rem;
-    border-radius: 6px;
-    text-align: center;
-    width: 160px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    border: none;
-    color: #fff;
-    text-decoration: none;
-    letter-spacing: 0.2rem;
-    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-.buttons .btn-hight:hover{
-    background-color: #fff;
-    color: #000;
-
-}
-.buttons .btn-hight:nth-child(2){
-    background-color: #e00000;
-    color: #020202;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    letter-spacing: 0.2rem;
-    text-decoration: none;
-    box-shadow: 2px 2px #e00000, -2px -2px #e00000;
-    border: none;
-}
-.buttons .btn-hight:nth-child(2):hover{
-    background-color: #fff;
-    color: #e00000;
-    box-shadow: 2px 2px #fff, -2px -2px #fff;
-    text-decoration: underline;
+.fade-in {
+    animation: fade-in 0.8s ease-in-out;
 }
 
-
-/* Barra de carregamento */
-.highlights .container .box .carousel .bar {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 4px;
-    right: 0;
-    background: rgba(255, 255, 255, 0.3);
-}
-
-.highlights .container .box .carousel .bar .bar-load {
-    display: block;
-    height: 100%;
-    width: 0;
-    background: #ff0000;
-    animation: load 5s linear infinite;
-}
-
-@keyframes load {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 100%;
-    }
-}
-
-
-/* Responsividade */
-@media screen and (max-width: 768px) {
-    .highlights .container {
-        background-image: url('/assets/images/image-mobile/ferrari/Ferrari\ 2.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        flex-direction: column;
-        align-items: center;
-        border-radius: 12px;
-    }
-
-    .highlights .container .box {
-        background: transparent;
-        flex-direction: column;
-        width: 100%;
+@media (max-width: 768px) {
+    .highlights-carousel-track{
         height: auto;
     }
-
-    .highlights .container .box .content {
-        background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
-        width: 100%;
+    .highlights-carousel-item{
+        background: linear-gradient(to bottom, #000, transparent);
         height: auto;
-    }
-
-    .highlights .container .box .carousel {
         width: 100%;
-        height: 400px;
-    }
-
-    .highlights .container .box .carousel .bar {
         display: flex;
         flex-direction: column;
     }
+    
+    .highlights-carousel-content  {
+        background: linear-gradient(to bottom, #000, transparent);
+        width: 100%;
+        font-size: 14px;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .highlights-carousel-content h2 {
+        font-size: 18px;
+    }
 
-    .highlights .container .box .carousel .bar .bar-load {
-        padding-inline: 80px;
+    .highlights-carousel-content .btns {
+        padding: 8px 15px;
+        flex-direction: row;
+        width: 100%;
+        align-items: start;
+        justify-content: start;
+        font-size: 14px;
+    }
+    .highlights-carousel-content .btns .highlights-btn{
+        font-size: 0.8rem;
+        border-radius: 2px;
+        padding: 0.6rem 2.6rem;
     }
 }

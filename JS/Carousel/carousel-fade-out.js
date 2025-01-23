@@ -1,59 +1,26 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const slides = document.querySelectorAll(".slide");
-    const nextBtn = document.querySelector(".next");
-    const prevBtn = document.querySelector(".prev");
-    const barLoad = document.querySelector(".bar-load");
-  
-    let currentSlide = 0;
-    let interval;
-  
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.classList.remove("active");
-            if (i === index) {
-                slide.classList.add("active");
-            }
-        });
-    }
-  
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-        resetBar();
-    }
-  
-    function prevSlide() {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        showSlide(currentSlide);
-        resetBar();
-    }
-    function resetBar() {
-        barLoad.style.animation = "none";
-        setTimeout(() => {
-            barLoad.style.animation = "";
-        }, 10);
-    }
-  
-    function startAutoSlide() {
-        interval = setInterval(nextSlide, 5000);
-    }
-  
-    function stopAutoSlide() {
-        clearInterval(interval);
-    }
-  
-    nextBtn.addEventListener("click", () => {
-        nextSlide();
-        stopAutoSlide();
-        startAutoSlide();
+const track = document.querySelector('.highlights .highlights-carousel-track');
+const items = document.querySelectorAll('.highlights .highlights-carousel-item');
+const indicators = document.querySelectorAll('.highlights .highlights-carousel-indicators div');
+
+let currentIndex = 0;
+
+function updateCarousel() {
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    indicators.forEach((indicator, index) => {
+        indicator.classList.toggle('active', index === currentIndex);
     });
-  
-    prevBtn.addEventListener("click", () => {
-        prevSlide();
-        stopAutoSlide();
-        startAutoSlide();
+}
+
+function goToNextSlide() {
+    currentIndex = (currentIndex + 1) % items.length;
+    updateCarousel();
+}
+
+indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+        currentIndex = index;
+        updateCarousel();
     });
-  
-    startAutoSlide();
 });
-  
+
+setInterval(goToNextSlide, 4000); // 4 segundos entre transições
