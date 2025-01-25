@@ -216,6 +216,16 @@
     cursor: pointer;
     transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
+.beginning .box .content button a{
+    color: #000;
+    text-decoration: none;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.beginning .box .content button a:hover{
+    color: #fff;
+    transform: translateY(-1%);
+}
 
 .beginning .box .content button:hover {
     background-color: #000;

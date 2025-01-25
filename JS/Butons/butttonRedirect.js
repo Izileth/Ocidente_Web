@@ -1,23 +1,9 @@
-//Primeiro Link
-const btnLink = document.getElementById('explore')
-btnLink.addEventListener('click', () => {
-    const url = 'https://pilotoewebprojeto.netlify.app/'
-    window.open(url, '_blank')
-})
+// Seleciona todos os botões com a classe "buttonRedirect"
+const buttons = document.querySelectorAll('.btn-cta');
 
-//Segundo Link
-const btnLink2 = document.getElementById('explore2')
-
-btnLink2.addEventListener('click', () => {
-    const url = 'https://pilotoone.netlify.app/'
-    window.open(url, '_blank')
-})
-
-//Terceiro Link
-
-const btnLink3 = document.getElementById('explore3')
-
-btnLink3.addEventListener('click', () => {
-    const url = 'https://pilotothree.netlify.app/'
-    window.open(url, '_blank')
-})
+// Adiciona um evento de clique a cada botão selecionado
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        window.location.href = 'https://manifestoriental.netlify.app';
+    });
+});
